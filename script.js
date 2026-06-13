@@ -165,7 +165,31 @@ const ring = document.querySelector(".cursor-ring");
         }
 
     });
+window.addEventListener("scroll", () => {
 
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 150;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.style.color = "#d1d5db";
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.style.color = "#8b5cf6";
+        }
+
+    });
+
+});
 
      const dot = document.querySelector(".cursor-dot");
 const ring = document.querySelector(".cursor-ring");
