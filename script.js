@@ -165,25 +165,6 @@ window.addEventListener("scroll", () => {
     });
 
 });
-window.addEventListener("load", function(){
-
-    const preloader = document.getElementById("preloader");
-
-    if(preloader){
-
-        setTimeout(function(){
-
-            preloader.style.opacity = "0";
-
-            setTimeout(function(){
-
-                preloader.style.display = "none";
-
-            },1000);
-
-        },3000);
-
-    }
 
 });
      const dot = document.querySelector(".cursor-dot");
