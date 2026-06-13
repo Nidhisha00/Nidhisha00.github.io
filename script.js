@@ -191,20 +191,7 @@ window.addEventListener("scroll", () => {
 
 });
 
-     const dot = document.querySelector(".cursor-dot");
-const ring = document.querySelector(".cursor-ring");
-
-if(dot && ring){
-
-    document.addEventListener("mousemove", function(e){
-
-        dot.style.left = e.clientX + "px";
-        dot.style.top = e.clientY + "px";
-
-        ring.style.left = e.clientX + "px";
-        ring.style.top = e.clientY + "px";
-
-    });
+    
 
     const hoverItems =
         document.querySelectorAll("a, button");
@@ -234,20 +221,6 @@ if(dot && ring){
 }
 /* ===== SAFE SASPO CURSOR ===== */
 
-const dot = document.querySelector(".cursor-dot");
-const ring = document.querySelector(".cursor-ring");
-
-if(dot && ring){
-
-    document.addEventListener("mousemove", function(e){
-
-        dot.style.left = e.clientX + "px";
-        dot.style.top = e.clientY + "px";
-
-        ring.style.left = e.clientX + "px";
-        ring.style.top = e.clientY + "px";
-
-    });
 
     const hoverItems =
         document.querySelectorAll("a, button");
