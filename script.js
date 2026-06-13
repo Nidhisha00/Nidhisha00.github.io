@@ -166,9 +166,7 @@ const ring = document.querySelector(".cursor-ring");
 
     });
 
-});
 
-});
      const dot = document.querySelector(".cursor-dot");
 const ring = document.querySelector(".cursor-ring");
 
