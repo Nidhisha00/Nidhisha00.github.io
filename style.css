@@ -743,4 +743,35 @@ body{
         height 0.2s ease,
         border 0.2s ease;
 }
+/* ===== CURSOR GLOW ===== */
+
+.cursor-glow{
+    position: fixed;
+
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(139,92,246,0.22) 0%,
+            rgba(139,92,246,0.12) 35%,
+            rgba(139,92,246,0.05) 60%,
+            transparent 80%
+        );
+
+    pointer-events: none;
+
+    z-index: 99990;
+
+    transform: translate(-50%, -50%);
+
+    filter: blur(25px);
+
+    transition:
+        width 0.3s ease,
+        height 0.3s ease;
+}
 ```
