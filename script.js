@@ -188,11 +188,8 @@ window.addEventListener("load", function() {
 });
 /* ===== CUSTOM CURSOR ===== */
 
-const dot =
-    document.querySelector(".cursor-dot");
-
-const ring =
-    document.querySelector(".cursor-ring");
+const dot = document.querySelector(".cursor-dot");
+const ring = document.querySelector(".cursor-ring");
 
 document.addEventListener("mousemove", function(e){
 
@@ -203,7 +200,6 @@ document.addEventListener("mousemove", function(e){
     ring.style.top = e.clientY + "px";
 
 });
-
 
 const hoverItems =
     document.querySelectorAll("a, button");
