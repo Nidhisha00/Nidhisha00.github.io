@@ -1,98 +1,167 @@
-```javascript
-// ===============================
-// Smooth Scrolling Navigation
-// ===============================
+// =======================
+// Typing Effect
+// =======================
 
-document.querySelectorAll('.nav-links a').forEach(link => {
+const heroTitle = document.querySelector(".hero-text h2");
 
-    link.addEventListener('click', function (e) {
+if (heroTitle) {
+    const texts = [
+        "Electrical and Computer Engineering Student",
+        "Machine Learning Enthusiast",
+        "Full Stack Explorer",
+        "IoT Innovator"
+    ];
 
-        e.preventDefault();
+    let textIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
 
-        const targetId = this.getAttribute('href');
+    function typeEffect() {
+        const currentText = texts[textIndex];
 
-        const targetSection = document.querySelector(targetId);
-
-        if (targetSection) {
-
-            targetSection.scrollIntoView({
-                behavior: 'smooth'
-            });
-
+        if (!deleting) {
+            heroTitle.textContent = currentText.substring(0, charIndex++);
+        } else {
+            heroTitle.textContent = currentText.substring(0, charIndex--);
         }
 
-    });
+        let speed = deleting ? 50 : 100;
 
-});
+        if (!deleting && charIndex > currentText.length) {
+            deleting = true;
+            speed = 1500;
+        }
 
+        if (deleting && charIndex < 0) {
+            deleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+        }
 
-// ===============================
-// Navbar Shadow on Scroll
-// ===============================
-
-window.addEventListener('scroll', () => {
-
-    const header = document.querySelector('header');
-
-    if (window.scrollY > 50) {
-
-        header.style.boxShadow =
-            "0 5px 20px rgba(0,0,0,0.3)";
-
+        setTimeout(typeEffect, speed);
     }
 
-    else {
-
-        header.style.boxShadow = "none";
-
-    }
-
-});
+    typeEffect();
+}
 
 
-// ===============================
-// Fade-in Animation on Scroll
-// ===============================
+// =======================
+// Fade-in Animation
+// =======================
 
-const sections = document.querySelectorAll('.section');
+const sections = document.querySelectorAll(".section");
 
 const observer = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
 
         if (entry.isIntersecting) {
-
             entry.target.style.opacity = "1";
-
             entry.target.style.transform = "translateY(0)";
-
         }
 
     });
 
 }, {
-    threshold: 0.15
+    threshold: 0.2
 });
 
 sections.forEach(section => {
-
     section.style.opacity = "0";
-
     section.style.transform = "translateY(40px)";
-
-    section.style.transition =
-        "all 0.8s ease";
+    section.style.transition = "all 0.8s ease";
 
     observer.observe(section);
+});
+
+
+// =======================
+// Navbar Background Change
+// =======================
+
+window.addEventListener("scroll", () => {
+
+    const navbar = document.querySelector("header");
+
+    if (window.scrollY > 50) {
+        navbar.style.background = "#0b0f19";
+    } else {
+        navbar.style.background = "rgba(11,15,25,0.85)";
+    }
+});
+
+
+// =======================
+// Scroll to Top Button
+// =======================
+
+const scrollBtn = document.createElement("button");
+
+scrollBtn.innerHTML = "↑";
+
+scrollBtn.style.position = "fixed";
+scrollBtn.style.bottom = "20px";
+scrollBtn.style.right = "20px";
+scrollBtn.style.width = "50px";
+scrollBtn.style.height = "50px";
+scrollBtn.style.borderRadius = "50%";
+scrollBtn.style.border = "none";
+scrollBtn.style.background = "#8b5cf6";
+scrollBtn.style.color = "white";
+scrollBtn.style.fontSize = "20px";
+scrollBtn.style.cursor = "pointer";
+scrollBtn.style.display = "none";
+scrollBtn.style.zIndex = "999";
+
+document.body.appendChild(scrollBtn);
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 300) {
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+
+});
+
+scrollBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 });
 
 
-// ===============================
-// Console Greeting
-// ===============================
+// =======================
+// Active Navigation Link
+// =======================
 
-console.log(
-    "Welcome to Nidhisha Raj P's Portfolio 🚀"
-);
-```
+const navLinks = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 150;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.style.color = "#d1d5db";
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.style.color = "#8b5cf6";
+        }
+
+    });
+
+});
