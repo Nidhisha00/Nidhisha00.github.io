@@ -165,21 +165,24 @@ window.addEventListener("scroll", () => {
     });
 
 });
-window.addEventListener("load", function(){
+window.addEventListener("load", function() {
 
-    const preloader =
-        document.getElementById("preloader");
+    const preloader = document.getElementById("preloader");
 
-    setTimeout(function(){
+    if (preloader) {
 
-        preloader.style.opacity = "0";
+        setTimeout(function() {
 
-        setTimeout(function(){
+            preloader.style.opacity = "0";
 
-            preloader.remove();
+            setTimeout(function() {
 
-        },1000);
+                preloader.remove();
 
-    },3000);
+            }, 1000);
+
+        }, 3000);
+
+    }
 
 });
