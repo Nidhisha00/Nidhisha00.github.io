@@ -469,6 +469,15 @@ footer{
     font-size: 1rem;
     font-weight: 600;
 }
+.contact-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-links a i {
+    font-size: 1.2rem;
+}
 
 
 
