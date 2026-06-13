@@ -226,8 +226,14 @@ if(dot && ring){
     });
 
 }
-    }
-    /* ===== CURSOR GLOW ===== */
+        ...
+
+if(dot && ring){
+
+    ...
+}
+
+/* ===== CURSOR GLOW ===== */
 
 const glow =
     document.querySelector(".cursor-glow");
@@ -245,5 +251,6 @@ if(glow){
     });
 
 }
-
+    }
+  
 });
