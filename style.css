@@ -446,4 +446,30 @@ footer{
     align-items: center;
     gap: 10px;
 }
+.skill-card img {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 15px;
+}
+
+.emoji-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skill-card span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+
 ```
