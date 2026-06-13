@@ -153,18 +153,7 @@ window.addEventListener("scroll", () => {
         }
 
     });
-    const dot = document.querySelector(".cursor-dot");
-const ring = document.querySelector(".cursor-ring");
-
-    navLinks.forEach(link => {
-
-        link.style.color = "#d1d5db";
-
-        if (link.getAttribute("href") === "#" + current) {
-            link.style.color = "#8b5cf6";
-        }
-
-    });
+   
 window.addEventListener("scroll", () => {
 
     let current = "";
