@@ -186,9 +186,7 @@ window.addEventListener("load", function(){
     }
 
 });
-        /* ===== CUSTOM CURSOR ===== */
-
-const dot = document.querySelector(".cursor-dot");
+     const dot = document.querySelector(".cursor-dot");
 const ring = document.querySelector(".cursor-ring");
 
 if(dot && ring){
@@ -214,7 +212,6 @@ if(dot && ring){
             ring.style.height = "55px";
 
             ring.style.borderColor = "#c084fc";
-             
 
         });
 
@@ -224,22 +221,9 @@ if(dot && ring){
             ring.style.height = "35px";
 
             ring.style.borderColor = "#8b5cf6";
-            
-
 
         });
 
     });
 
 }
-        ...
-
-if(dot && ring){
-
-    ...
-}
-
-
-    }
-  
-});
