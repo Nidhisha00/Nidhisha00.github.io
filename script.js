@@ -186,3 +186,46 @@ window.addEventListener("load", function() {
     }
 
 });
+/* ===== CUSTOM CURSOR ===== */
+
+const dot =
+    document.querySelector(".cursor-dot");
+
+const ring =
+    document.querySelector(".cursor-ring");
+
+document.addEventListener("mousemove", function(e){
+
+    dot.style.left = e.clientX + "px";
+    dot.style.top = e.clientY + "px";
+
+    ring.style.left = e.clientX + "px";
+    ring.style.top = e.clientY + "px";
+
+});
+
+
+const hoverItems =
+    document.querySelectorAll("a, button");
+
+hoverItems.forEach(item => {
+
+    item.addEventListener("mouseenter", () => {
+
+        ring.style.width = "55px";
+        ring.style.height = "55px";
+
+        ring.style.borderColor = "#c084fc";
+
+    });
+
+    item.addEventListener("mouseleave", () => {
+
+        ring.style.width = "35px";
+        ring.style.height = "35px";
+
+        ring.style.borderColor = "#8b5cf6";
+
+    });
+
+});
