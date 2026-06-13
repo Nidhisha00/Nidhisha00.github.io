@@ -163,6 +163,8 @@ window.addEventListener("scroll", () => {
         }
 
     });
+
+});
 window.addEventListener("load", () => {
 
     setTimeout(() => {
@@ -176,9 +178,8 @@ window.addEventListener("load", () => {
 
             preloader.style.display = "none";
 
-        },1000);
+        }, 1000);
 
-    },3000);
+    }, 3000);
 
-});
 });
