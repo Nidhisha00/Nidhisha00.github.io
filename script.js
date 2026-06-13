@@ -220,7 +220,18 @@ window.addEventListener("scroll", () => {
 
 }
 /* ===== SAFE SASPO CURSOR ===== */
+  const dot = document.querySelector(".cursor-dot");
+const ring = document.querySelector(".cursor-ring");
 
+    navLinks.forEach(link => {
+
+        link.style.color = "#d1d5db";
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.style.color = "#8b5cf6";
+        }
+
+    });
 
     const hoverItems =
         document.querySelectorAll("a, button");
