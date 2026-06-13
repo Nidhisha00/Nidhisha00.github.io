@@ -211,6 +211,10 @@ if(dot && ring){
             ring.style.height = "55px";
 
             ring.style.borderColor = "#c084fc";
+             if(glow){
+        glow.style.width = "300px";
+        glow.style.height = "300px";
+             }
 
         });
 
