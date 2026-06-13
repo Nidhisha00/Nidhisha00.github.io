@@ -165,21 +165,21 @@ window.addEventListener("scroll", () => {
     });
 
 });
-window.addEventListener("load", () => {
+window.addEventListener("load", function(){
 
-    setTimeout(() => {
+    const preloader =
+        document.getElementById("preloader");
 
-        const preloader =
-            document.getElementById("preloader");
+    setTimeout(function(){
 
         preloader.style.opacity = "0";
 
-        setTimeout(() => {
+        setTimeout(function(){
 
-            preloader.style.display = "none";
+            preloader.remove();
 
-        }, 1000);
+        },1000);
 
-    }, 3000);
+    },3000);
 
 });
