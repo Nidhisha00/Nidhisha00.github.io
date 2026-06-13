@@ -153,6 +153,8 @@ window.addEventListener("scroll", () => {
         }
 
     });
+    const dot = document.querySelector(".cursor-dot");
+const ring = document.querySelector(".cursor-ring");
 
     navLinks.forEach(link => {
 
