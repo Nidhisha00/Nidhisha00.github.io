@@ -165,24 +165,27 @@ window.addEventListener("scroll", () => {
     });
 
 });
-window.addEventListener("load", function() {
+window.addEventListener("load", function(){
 
     const preloader = document.getElementById("preloader");
 
-    if (preloader) {
+    if(preloader){
 
-        setTimeout(function() {
+        setTimeout(function(){
 
             preloader.style.opacity = "0";
 
-            setTimeout(function() {
+            setTimeout(function(){
 
-                preloader.remove();
+                preloader.style.display = "none";
 
-            }, 1000);
+            },1000);
 
-        }, 3000);
+        },3000);
 
+    }
+
+});
         /* ===== CUSTOM CURSOR ===== */
 
 const dot = document.querySelector(".cursor-dot");
@@ -211,10 +214,7 @@ if(dot && ring){
             ring.style.height = "55px";
 
             ring.style.borderColor = "#c084fc";
-             if(glow){
-        glow.style.width = "300px";
-        glow.style.height = "300px";
-             }
+             
 
         });
 
@@ -224,10 +224,7 @@ if(dot && ring){
             ring.style.height = "35px";
 
             ring.style.borderColor = "#8b5cf6";
-             if(glow){
-        glow.style.width = "220px";
-        glow.style.height = "220px";
-    }
+            
 
 
         });
@@ -242,24 +239,7 @@ if(dot && ring){
     ...
 }
 
-/* ===== CURSOR GLOW ===== */
 
-const glow =
-    document.querySelector(".cursor-glow");
-
-if(glow){
-
-    document.addEventListener("mousemove", function(e){
-
-        glow.style.left =
-            e.clientX + "px";
-
-        glow.style.top =
-            e.clientY + "px";
-
-    });
-
-}
     }
   
 });
