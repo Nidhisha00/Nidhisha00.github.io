@@ -705,4 +705,42 @@ footer{
         transform:translateY(200px);
     }
 }
+/* ===== CUSTOM CURSOR ===== */
+
+body{
+    cursor:none;
+}
+
+.cursor-dot{
+    position:fixed;
+    width:8px;
+    height:8px;
+    background:#8b5cf6;
+    border-radius:50%;
+    pointer-events:none;
+    z-index:100000;
+
+    transform:translate(-50%,-50%);
+}
+
+.cursor-ring{
+    position:fixed;
+    width:35px;
+    height:35px;
+
+    border:2px solid #8b5cf6;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    z-index:99999;
+
+    transform:translate(-50%,-50%);
+
+    transition:
+        width 0.2s ease,
+        height 0.2s ease,
+        border 0.2s ease;
+}
 ```
