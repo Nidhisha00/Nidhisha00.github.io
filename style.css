@@ -583,4 +583,126 @@ footer{
     position:relative;
     z-index:2;
 }
+
+/* ===== SASPO INSPIRED INTRO ===== */
+
+#preloader{
+    position:fixed;
+    inset:0;
+    background:#030712;
+    z-index:99999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    transition:opacity 1s ease;
+}
+
+.loader-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.loader-content h1{
+    color:white;
+
+    font-size:3rem;
+
+    letter-spacing:6px;
+
+    text-shadow:
+        0 0 10px #8b5cf6,
+        0 0 25px #8b5cf6;
+
+    margin-bottom:20px;
+}
+
+.loader-content p{
+    color:#8b5cf6;
+
+    margin-bottom:30px;
+}
+
+.loading-bar{
+    width:250px;
+
+    height:4px;
+
+    background:rgba(255,255,255,0.1);
+
+    border-radius:50px;
+
+    overflow:hidden;
+}
+
+.loading-bar span{
+    display:block;
+
+    height:100%;
+
+    width:0;
+
+    background:#8b5cf6;
+
+    animation:loading 3s linear forwards;
+}
+
+@keyframes loading{
+
+    from{
+        width:0;
+    }
+
+    to{
+        width:100%;
+    }
+}
+
+.star-field{
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+}
+
+.layer{
+    position:absolute;
+
+    inset:-50%;
+
+    background-image:
+        radial-gradient(white 1px, transparent 1px);
+
+    background-size:50px 50px;
+
+    opacity:0.4;
+}
+
+.layer:nth-child(1){
+    animation:moveStars 40s linear infinite;
+}
+
+.layer:nth-child(2){
+    animation:moveStars 60s linear infinite reverse;
+}
+
+.layer:nth-child(3){
+    animation:moveStars 80s linear infinite;
+}
+
+@keyframes moveStars{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(200px);
+    }
+}
 ```
