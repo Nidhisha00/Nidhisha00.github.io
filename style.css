@@ -23,6 +23,7 @@ body{
     overflow-x:hidden;
     line-height:1.7;
     cursor:none;
+
 }=====================
    NAVBAR
 =========================== */
@@ -653,28 +654,28 @@ body{
         width 0.3s ease,
         height 0.3s ease;
 }
-/* ===== SAFE SASPO CURSOR ===== */
+/* ===== PURPLE CURSOR ===== */
 
 .cursor-dot{
-    position:fixed;
-    width:8px;
-    height:8px;
-    background:#8b5cf6;
-    border-radius:50%;
-    pointer-events:none;
-    z-index:99999;
-    transform:translate(-50%,-50%);
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: #8b5cf6;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
 }
 
 .cursor-ring{
-    position:fixed;
-    width:35px;
-    height:35px;
-    border:2px solid #8b5cf6;
-    border-radius:50%;
-    pointer-events:none;
-    z-index:99998;
-    transform:translate(-50%,-50%);
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #8b5cf6;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99998;
+    transform: translate(-50%, -50%);
     transition:
         width 0.2s ease,
         height 0.2s ease,
