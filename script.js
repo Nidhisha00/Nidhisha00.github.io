@@ -208,43 +208,44 @@ window.addEventListener("scroll", () => {
     });
 
 }
-/* ===== SAFE SASPO CURSOR ===== */
-  const dot = document.querySelector(".cursor-dot");
-const ring = document.querySelector(".cursor-ring");
+/* ===== PURPLE CURSOR ===== */
 
-    navLinks.forEach(link => {
+const cursorDot = document.querySelector(".cursor-dot");
+const cursorRing = document.querySelector(".cursor-ring");
 
-        link.style.color = "#d1d5db";
+if(cursorDot && cursorRing){
 
-        if (link.getAttribute("href") === "#" + current) {
-            link.style.color = "#8b5cf6";
-        }
+    document.addEventListener("mousemove", function(e){
+
+        cursorDot.style.left = e.clientX + "px";
+        cursorDot.style.top = e.clientY + "px";
+
+        cursorRing.style.left = e.clientX + "px";
+        cursorRing.style.top = e.clientY + "px";
 
     });
 
-    const hoverItems =
-        document.querySelectorAll("a, button");
+    const hoverItems = document.querySelectorAll("a, button");
 
     hoverItems.forEach(item => {
 
         item.addEventListener("mouseenter", () => {
 
-            ring.style.width = "55px";
-            ring.style.height = "55px";
-
-            ring.style.borderColor = "#c084fc";
+            cursorRing.style.width = "55px";
+            cursorRing.style.height = "55px";
+            cursorRing.style.borderColor = "#c084fc";
 
         });
 
         item.addEventListener("mouseleave", () => {
 
-            ring.style.width = "35px";
-            ring.style.height = "35px";
-
-            ring.style.borderColor = "#8b5cf6";
+            cursorRing.style.width = "35px";
+            cursorRing.style.height = "35px";
+            cursorRing.style.borderColor = "#8b5cf6";
 
         });
 
     });
 
 }
+
